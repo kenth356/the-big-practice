@@ -140,7 +140,6 @@ public class electric {
 
     public static void exit() {
         System.out.println("\n[THANK YOU FOR USING!]");
-        System.out.println("[BRUH]");
     }
 
     public static void SAVEDFILES() {
