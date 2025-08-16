@@ -143,17 +143,17 @@ public class electric {
     }
 
     public static void SAVEDFILES() {
-        try (PrintWriter receiver = new PrintWriter("customers.txt")) {
+        try (PrintWriter writer = new PrintWriter("customers.txt")) {
             for (customersDC customers : customersD) {
-                receiver.println("CUSTOMER NAME: " + customers.customerNAME);
-                receiver.println("METER ID: " + customers.meterID);
-                receiver.printf("PREVIOUS READING: %.2f kWh%n", customers.prevREADING);
-                receiver.printf("CURRENT READING: %.2f kWh%n", customers.currREADING);
-                receiver.printf("TOTAL KILOWATT USAGE: %.2f kWh%n", customers.totalKWU);
-                receiver.printf("RATE PER KILOWATT: %.2f kWh%n", customers.ratePKU);
-                receiver.printf("GROSS AMOUNT: %.2f PHP%n", customers.groAMT);
-                receiver.printf("MISCELLANEOUS CHARGES: %.1f PHP%n", customers.misceCHAR);
-                receiver.printf("TOTAL AMOUNT DUE: %.2f PHP%n", customers.totalAMT);
+                writer.println("CUSTOMER NAME: " + customers.customerNAME);
+                writer.println("METER ID: " + customers.meterID);
+                writer.printf("PREVIOUS READING: %.2f kWh%n", customers.prevREADING);
+                writer.printf("CURRENT READING: %.2f kWh%n", customers.currREADING);
+                writer.printf("TOTAL KILOWATT USAGE: %.2f kWh%n", customers.totalKWU);
+                writer.printf("RATE PER KILOWATT: %.2f kWh%n", customers.ratePKU);
+                writer.printf("GROSS AMOUNT: %.2f PHP%n", customers.groAMT);
+                writer.printf("MISCELLANEOUS CHARGES: %.1f PHP%n", customers.misceCHAR);
+                writer.printf("TOTAL AMOUNT DUE: %.2f PHP%n", customers.totalAMT);
             }
         } catch (IOException e) {
             for (int i = 0; i < 3; i++) {
